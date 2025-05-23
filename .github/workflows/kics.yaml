@@ -13,7 +13,7 @@ jobs:
       with:
         path: ec2
         token: ${{ secrets.GITHUB_TOKEN }}
-        output_path: myResults/
+        output_path: results-dir/
         output_formats: 'json,sarif'
         ignore_on_exit: results
         enable_comments: true
