@@ -11,9 +11,9 @@ jobs:
     - name: run kics Scan
       uses: cx-artur-ribeiro/kics-github-action@v2.1.9
       with:
-        path: test/samples/positive1.tf,test/samples/positive2.tf
+        path: ec2
         token: ${{ secrets.GITHUB_TOKEN }}
-        output_path: myResults/
+        output_path: results-dir/
         output_formats: 'json,sarif'
         ignore_on_exit: results
         enable_comments: true
