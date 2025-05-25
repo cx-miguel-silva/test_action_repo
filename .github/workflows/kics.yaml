@@ -19,9 +19,9 @@ jobs:
         enable_comments: true
     - name: Show results
       run: |
-        cat results-dir/results.sarif
-        cat results-dir/results.json
+        cat myResults/results.sarif
+        cat myResults/results.json
     - name: Upload SARIF file
       uses: github/codeql-action/upload-sarif@v3
       with:
-        sarif_file: results-dir/results.sarif
+        sarif_file: myResults/results.sarif
