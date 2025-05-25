@@ -9,7 +9,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: run kics Scan
-      uses: cx-artur-ribeiro/kics-github-action@v2.1.9
+      uses: cx-artur-ribeiro/kics-github-action@v2.1.10
       with:
         path: ec2/al2-mutable-private.yaml
         token: ${{ secrets.GITHUB_TOKEN }}
