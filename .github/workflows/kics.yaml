@@ -9,9 +9,9 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: run kics Scan
-      uses: cx-artur-ribeiro/kics-github-action@v2.1.9
+      uses: cx-artur-ribeiro/kics-github-action@v2.1.11
       with:
-        path: test/samples/positive1.tf,test/samples/positive2.tf
+        path: ec2/al2-mutable-private.yaml
         token: ${{ secrets.GITHUB_TOKEN }}
         output_path: myResults/
         output_formats: 'json,sarif'
@@ -19,9 +19,9 @@ jobs:
         enable_comments: true
     - name: Show results
       run: |
-        cat results-dir/results.sarif
-        cat results-dir/results.json
+        cat myResults/results.sarif
+        cat myResults/results.json
     - name: Upload SARIF file
       uses: github/codeql-action/upload-sarif@v3
       with:
-        sarif_file: results-dir/results.sarif
+        sarif_file: myResults/results.sarif
